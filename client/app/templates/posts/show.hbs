@@ -1,0 +1,26 @@
+<div class="home">
+  {{#if isAuthenticated}}
+    <section class="home__header">
+      <nav class='home__nav home__nav_left'>
+        {{#link-to "home"}}Home{{/link-to}}
+        {{#link-to "posts"}}Posts{{/link-to}}
+      </nav>
+      <div class="home__login-info">
+        You're logged in as {{ session.username }}
+      </div>
+      <nav class='home__nav home__nav_right'>
+        <a {{ action 'logoutUser' }}>Logout</a>
+      </nav>
+    </section>
+
+    <section class="home__posts">
+      <article class="post">
+        <p>{{post.body}}</p>
+        <div class="post__author">
+          <i>By: </i><span>{{post.user.username}}</span>
+        </div>
+      </article>
+    </section>
+  {{/if}}
+</div>
+

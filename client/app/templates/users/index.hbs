@@ -1,0 +1,7 @@
+<h2>Users</h2>
+{{#each users as |user|}}
+  <p>{{user.username}}</p>
+  {{#each user.posts as |post|}}
+    <p>{{post.body}}</p>
+  {{/each}}
+{{/each}}

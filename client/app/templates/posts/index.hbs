@@ -1,0 +1,8 @@
+{{#each posts as |post|}}
+  {{#link-to 'posts.show' post class="post"}}
+    <p>{{post.body}}</p>
+    <div class="post__author">
+      <i>By: </i><span>{{post.user.username}}</span>
+    </div>
+  {{/link-to}}
+{{/each}}
